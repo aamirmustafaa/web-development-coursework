@@ -1,0 +1,41 @@
+{
+  "name": "internet-history-pakistan",
+  "version": "1.0.0",
+  "description": "Interactive timeline and educational resource about Pakistan's internet history",
+  "main": "index.html",
+  "scripts": {
+    "validate": "node validate-project.js",
+    "validate:html": "node -e \"const V = require('./validate-project.js'); const v = new V(); console.log('Validating HTML files...'); v.findFiles('.', ['.html']).forEach(f => console.log(v.validateHTML(f)));\"",
+    "validate:css": "node -e \"const V = require('./validate-project.js'); const v = new V(); console.log('Validating CSS files...'); v.findFiles('.', ['.css']).forEach(f => console.log(v.validateCSS(f)));\"",
+    "validate:json": "node -e \"const V = require('./validate-project.js'); const v = new V(); console.log('Validating JSON files...'); v.findFiles('.', ['.json']).forEach(f => console.log(v.validateJSON(f)));\"",
+    "serve": "python -m http.server 8000",
+    "dev": "nodemon server.js",
+    "start": "node server.js"
+  },
+  "keywords": [
+    "pakistan",
+    "internet",
+    "history",
+    "timeline",
+    "education",
+    "handlebars",
+    "validation"
+  ],
+  "author": "Your Name",
+  "license": "MIT",
+  "devDependencies": {
+    "nodemon": "^3.0.1"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "express-handlebars": "^7.1.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/your-username/internet-history-pakistan.git"
+  },
+  "bugs": {
+    "url": "https://github.com/your-username/internet-history-pakistan/issues"
+  },
+  "homepage": "https://github.com/your-username/internet-history-pakistan#readme"
+}
