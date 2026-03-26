@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Code Validators - Internet History of Pakistan</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #2c3e50, #34495e);
+            color: white;
+            padding: 30px;
+            text-align: center;
+        }
+        
+        .header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+        
+        .header p {
+            opacity: 0.9;
+            font-size: 1.1rem;
+        }
+        
+        .validators-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+            padding: 40px;
+        }
+        
+        .validator-card {
+            background: #f8f9fa;
+            border-radius: 12px;
+            padding: 25px;
+            border: 2px solid #e9ecef;
+            transition: all 0.3s ease;
+        }
+        
+        .validator-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+            border-color: #60a5fa;
+        }
+        
+        .validator-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        
+        .validator-icon {
+            font-size: 2rem;
+            margin-right: 15px;
+        }
+        
+        .validator-title {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: #2c3e50;
+        }
+        
+        .file-input-group {
+            margin-bottom: 20px;
+        }
+        
+        .file-input-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 500;
+            color: #495057;
+        }
+        
+        .file-input {
+            width: 100%;
+            padding: 12px;
+            border: 2px dashed #dee2e6;
+            border-radius: 8px;
+            background: white;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .file-input:hover {
+            border-color: #60a5fa;
+            background: #f8f9ff;
+        }
+        
+        .validate-btn {
+            width: 100%;
+            padding: 12px 24px;
+            background: linear-gradient(135deg, #60a5fa, #3b82f6);
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .validate-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(96, 165, 250, 0.3);
+        }
+        
+        .validate-btn:disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+            transform: none;
+            box-shadow: none;
+        }
+        
+        .results {
+            margin-top: 20px;
+            padding: 15px;
+            border-radius: 8px;
+            display: none;
+        }
+        
+        .results.success {
+            background: #d4edda;
+            border: 1px solid #c3e6cb;
+            color: #155724;
+        }
+        
+        .results.error {
+            background: #f8d7da;
+            border: 1px solid #f5c6cb;
+            color: #721c24;
+        }
+        
+        .results.warning {
+            background: #fff3cd;
+            border: 1px solid #ffeaa7;
+            color: #856404;
+        }
+        
+        .error-list {
+            margin-top: 10px;
+            list-style: none;
+        }
+        
+        .error-list li {
+            padding: 5px 0;
+            border-bottom: 1px solid rgba(0,0,0,0.1);
+        }
+        
+        .error-list li:last-child {
+            border-bottom: none;
+        }
+        
+        .back-btn {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            padding: 10px 20px;
+            background: rgba(255,255,255,0.9);
+            color: #2c3e50;
+            text-decoration: none;
+            border-radius: 25px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(10px);
+        }
+        
+        .back-btn:hover {
+            background: white;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+    </style>
+</head>
+<body>
+    <a href="../index.html" class="back-btn">← Back to Home</a>
+    
+    <div class="container">
+        <header class="header">
+            <h1>Code Validators</h1>
+            <p>Validate your HTML, CSS, and JSON files for errors and best practices</p>
+        </header>
+        
+        <main class="validators-grid">
+            <!-- HTML Validator -->
+            <div class="validator-card">
+                <div class="validator-header">
+                    <span class="validator-icon">🌐</span>
+                    <h3 class="validator-title">HTML Validator</h3>
+                </div>
+                <div class="file-input-group">
+                    <label for="html-file">Select HTML File:</label>
+                    <input type="file" id="html-file" class="file-input" accept=".html,.htm">
+                </div>
+                <button onclick="validateHTML()" class="validate-btn" id="html-validate-btn">Validate HTML</button>
+                <div id="html-results" class="results"></div>
+            </div>
+            
+            <!-- CSS Validator -->
+            <div class="validator-card">
+                <div class="validator-header">
+                    <span class="validator-icon">🎨</span>
+                    <h3 class="validator-title">CSS Validator</h3>
+                </div>
+                <div class="file-input-group">
+                    <label for="css-file">Select CSS File:</label>
+                    <input type="file" id="css-file" class="file-input" accept=".css">
+                </div>
+                <button onclick="validateCSS()" class="validate-btn" id="css-validate-btn">Validate CSS</button>
+                <div id="css-results" class="results"></div>
+            </div>
+            
+            <!-- JSON Validator -->
+            <div class="validator-card">
+                <div class="validator-header">
+                    <span class="validator-icon">📋</span>
+                    <h3 class="validator-title">JSON Validator</h3>
+                </div>
+                <div class="file-input-group">
+                    <label for="json-file">Select JSON File:</label>
+                    <input type="file" id="json-file" class="file-input" accept=".json">
+                </div>
+                <button onclick="validateJSON()" class="validate-btn" id="json-validate-btn">Validate JSON</button>
+                <div id="json-results" class="results"></div>
+            </div>
+        </main>
+    </div>
+    
+    <script src="../js/validators.js"></script>
+</body>
+</html>
