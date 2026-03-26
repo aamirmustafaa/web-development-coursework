@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{{title}}</title>
+
+  <!-- Google Font: Julius Sans One -->
+  <link href="https://fonts.googleapis.com/css2?family=Julius+Sans+One&display=swap" rel="stylesheet">
+
+  <!-- Styles -->
+  {{#if cssFile}}
+  <link rel="stylesheet" href="/css/{{cssFile}}" />
+  {{else}}
+  <link rel="stylesheet" href="/css/landing-style.css" />
+  {{/if}}
+</head>
+<body>
+  <!-- Navigation Partial -->
+  {{> navigation}}
+
+  <!-- Main Content -->
+  {{{body}}}
+
+  <!-- Scripts -->
+  {{#if jsFile}}
+  <script src="/js/{{jsFile}}"></script>
+  {{else}}
+  <script src="/js/landing-script.js"></script>
+  {{/if}}
+</body>
+</html>

@@ -1,0 +1,68 @@
+<!-- Hero Section -->
+<section class="hero-section">
+  <div class="hero-content">
+    <h1>Internet Impact on Pakistan</h1>
+    <p>How connectivity transformed society, economy, and daily life</p>
+  </div>
+</section>
+
+<main>
+  <!-- Stats Section -->
+  <section id="stats" class="stats-section">
+    <div class="container">
+      <div class="stats-grid">
+        {{#each stats}}
+        <div class="stat-card">
+          <div class="stat-value">{{value}}</div>
+          <div class="stat-caption">{{caption}}</div>
+        </div>
+        {{/each}}
+      </div>
+    </div>
+  </section>
+
+  <!-- Pillars Section -->
+  <section id="pillars" class="pillars-section">
+    <div class="container">
+      <h2>Key Impact Areas</h2>
+      <div class="pillars-grid">
+        {{#each pillars}}
+        <div class="pillar-card">
+          <div class="pillar-image">
+            <img src="{{image}}" alt="{{title}}" />
+          </div>
+          <div class="pillar-content">
+            <h3>{{title}}</h3>
+            <p>{{text}}</p>
+          </div>
+        </div>
+        {{/each}}
+      </div>
+    </div>
+  </section>
+
+  <!-- Case Studies Section -->
+  <section id="cases" class="cases-section">
+    <div class="container">
+      <h2>Success Stories</h2>
+      <div class="cases-grid">
+        {{#each cases}}
+        <div class="case-card">
+          <div class="case-image">
+            <img src="{{image}}" alt="{{title}}" />
+          </div>
+          <div class="case-content">
+            <div class="case-badges">
+              {{#each badges}}
+              <span class="badge">{{this}}</span>
+              {{/each}}
+            </div>
+            <h3>{{title}}</h3>
+            <p>{{text}}</p>
+          </div>
+        </div>
+        {{/each}}
+      </div>
+    </div>
+  </section>
+</main>

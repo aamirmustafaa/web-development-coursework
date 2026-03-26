@@ -1,0 +1,71 @@
+<!-- Hero Section -->
+<section class="hero-section">
+  <div class="hero-content">
+    <h1>{{hero.headline}}</h1>
+  </div>
+</section>
+
+<main>
+  <!-- Welcome Section -->
+  <section id="welcome" class="welcome-section">
+    <div class="container">
+      <h2>{{welcome.title}}</h2>
+      <div class="welcome-content">
+        {{#each welcome.paragraphs}}
+        <p>{{this}}</p>
+        {{/each}}
+      </div>
+    </div>
+  </section>
+
+  <!-- Highlights Section -->
+  <section id="highlights" class="highlights-section">
+    <div class="container">
+      <div class="highlights-grid">
+        {{#each highlights}}
+        <div class="highlight-card">
+          <div class="highlight-icon">
+            <img src="/{{icon}}" alt="{{title}}" />
+          </div>
+          <div class="highlight-content">
+            <h3>{{title}}</h3>
+            <span class="highlight-year">{{year}}</span>
+            <p>{{detail}}</p>
+          </div>
+        </div>
+        {{/each}}
+      </div>
+    </div>
+  </section>
+
+  <!-- Facts Section -->
+  <section id="facts" class="facts-section">
+    <div class="container">
+      <h2>{{facts.title}}</h2>
+      <ul class="facts-list">
+        {{#each facts.list}}
+        <li>{{this}}</li>
+        {{/each}}
+      </ul>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section id="cta" class="cta-section">
+    <div class="container">
+      <h2>{{cta.headline}}</h2>
+      <div class="cta-points">
+        {{#each cta.points}}
+        <p>{{this}}</p>
+        {{/each}}
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="page-footer">
+    <div class="container">
+      <p>{{footer.credits}} | {{footer.author}} | {{footer.year}}</p>
+    </div>
+  </footer>
+</main>

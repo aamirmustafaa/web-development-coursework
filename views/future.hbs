@@ -1,0 +1,126 @@
+<!-- Hero Section -->
+<section class="hero-section">
+  <div class="hero-content">
+    <h1>{{hero.title}}</h1>
+    <p>{{hero.subtitle}}</p>
+  </div>
+</section>
+
+<main>
+  <!-- Signals Section -->
+  <section id="signals" class="signals-section">
+    <div class="container">
+      <div class="section-header">
+        <small>{{signals.smallHeader}}</small>
+        <h2>{{signals.title}}</h2>
+        <p>{{signals.desc}}</p>
+      </div>
+      <div class="signals-grid">
+        {{#each signals.items}}
+        <div class="signal-card">
+          <div class="signal-value">{{value}}</div>
+          <div class="signal-label">{{label}}</div>
+        </div>
+        {{/each}}
+      </div>
+    </div>
+  </section>
+
+  <!-- Tracks Section -->
+  <section id="tracks" class="tracks-section">
+    <div class="container">
+      <div class="section-header">
+        <small>{{tracks.smallHeader}}</small>
+        <h2>{{tracks.title}}</h2>
+        <p>{{tracks.desc}}</p>
+      </div>
+      <div class="tracks-grid">
+        {{#each tracks.items}}
+        <div class="track-card">
+          <h3>{{title}}</h3>
+          <p>{{desc}}</p>
+        </div>
+        {{/each}}
+      </div>
+    </div>
+  </section>
+
+  <!-- Futures Section -->
+  <section id="futures" class="futures-section">
+    <div class="container">
+      <div class="section-header">
+        <small>{{futures.smallHeader}}</small>
+        <h2>{{futures.title}}</h2>
+        <p>{{futures.desc}}</p>
+      </div>
+      <div class="futures-grid">
+        {{#each futures.items}}
+        <div class="future-card">
+          <h3>{{title}}</h3>
+          <p>{{desc}}</p>
+        </div>
+        {{/each}}
+      </div>
+    </div>
+  </section>
+
+  <!-- Roadmap Section -->
+  <section id="roadmap" class="roadmap-section">
+    <div class="container">
+      <div class="section-header">
+        <small>{{roadmap.smallHeader}}</small>
+        <h2>{{roadmap.title}}</h2>
+        <p>{{roadmap.desc}}</p>
+      </div>
+      <div class="roadmap-timeline">
+        {{#each roadmap.years}}
+        <div class="roadmap-year">
+          <h3>{{@key}}</h3>
+          <div class="roadmap-items">
+            {{#each this}}
+            <div class="roadmap-item">
+              <h4>{{title}}</h4>
+              <p>{{desc}}</p>
+            </div>
+            {{/each}}
+          </div>
+        </div>
+        {{/each}}
+      </div>
+    </div>
+  </section>
+
+  <!-- Guardrails Section -->
+  <section id="guardrails" class="guardrails-section">
+    <div class="container">
+      <div class="section-header">
+        <small>{{guardrails.smallHeader}}</small>
+        <h2>{{guardrails.title}}</h2>
+        <p>{{guardrails.desc}}</p>
+      </div>
+      <div class="guardrails-grid">
+        {{#each guardrails.items}}
+        <div class="guardrail-card">
+          <h3>{{title}}</h3>
+          <p>{{desc}}</p>
+        </div>
+        {{/each}}
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section id="cta" class="cta-section">
+    <div class="container">
+      <p>{{cta.text}}</p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="page-footer">
+    <div class="container">
+      <p>{{footer.course}}</p>
+      <p>{{footer.creator}}</p>
+    </div>
+  </footer>
+</main>

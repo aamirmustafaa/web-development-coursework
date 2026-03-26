@@ -1,0 +1,26 @@
+<!-- Hero Section -->
+<div class="hero">
+  <h1>{{hero.title}}</h1>
+  <p>{{hero.description}}</p>
+  <a href="/intro" class="btn">{{hero.ctaText}} <span class="arrow">→</span></a>
+</div>
+
+<main>
+  <!-- Explore Section -->
+  <section id="explore" class="explore-section">
+    <div class="section-header">
+      <h2>{{explore.title}}</h2>
+      <p>Discover how connectivity transformed the economy, culture, and daily life through four focused lenses.</p>
+    </div>
+    
+    <div class="cards">
+      {{#each explore.cards}}
+      <div class="card">
+        <h3>{{title}}</h3>
+        <p>{{description}}</p>
+        <a href="/{{url}}" class="link">{{linkText}} <span class="arrow">→</span></a>
+      </div>
+      {{/each}}
+    </div>
+  </section>
+</main>

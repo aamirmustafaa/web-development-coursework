@@ -1,0 +1,32 @@
+<header>
+  <nav class="navbar">
+    <ul class="nav-links">
+      <li>
+        <a href="/" {{#if (eq navigation.navItems.0.active true)}}class="active"{{/if}}>
+          Home
+        </a>
+      </li>
+      <li>
+        <a href="/intro" {{#if (eq navigation.navItems.1.active true)}}class="active"{{/if}}>
+          Introduction
+        </a>
+      </li>
+      <li>
+        <a href="/evolution" {{#if (eq navigation.navItems.2.active true)}}class="active"{{/if}}>
+          Evolution
+        </a>
+      </li>
+      <li>
+        <a href="/impact" {{#if (eq navigation.navItems.3.active true)}}class="active"{{/if}}>
+          Impact
+        </a>
+      </li>
+      <li>
+        <a href="/future" {{#if (eq navigation.navItems.4.active true)}}class="active"{{/if}}>
+          Future
+        </a>
+      </li>
+      <li><a href="/validators" title="Code Validators">🔧</a></li>
+    </ul>
+  </nav>
+</header>
