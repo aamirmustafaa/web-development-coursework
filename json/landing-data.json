@@ -1,0 +1,66 @@
+{
+  "navigation": {
+    "navItems": [
+      {
+        "title": "Home",
+        "url": "#",
+        "active": true
+      },
+      {
+        "title": "Introduction",
+        "url": "html/intro.html",
+        "active": false
+      },
+      {
+        "title": "Evolution",
+        "url": "html/evolution.html",
+        "active": false
+      },
+      {
+        "title": "Impact",
+        "url": "html/impact.html",
+        "active": false
+      },
+      {
+        "title": "Future",
+        "url": "html/future.html",
+        "active": false
+      }
+    ]
+  },
+  "hero": {
+    "title": "Internet History of Pakistan",
+    "description": "Tracing the journey from dial\u2011up cafes to nationwide fibre and mobile broadband and the people, policies and platforms that reshaped daily life.",
+    "ctaText": "Explore the Journey",
+    "ctaUrl": "html/intro.html"
+  },
+  "explore": {
+    "title": "Explore Pakistan's Digital Evolution",
+    "cards": [
+      {
+        "title": "Introduction",
+        "description": "Journey from pioneering ISPs and university networks to the first email gateway that connected Pakistan to the world.",
+        "linkText": "Explore Origins",
+        "url": "html/intro.html"
+      },
+      {
+        "title": "Evolution",
+        "description": "Witness the leap from dial up to DSL, 3G/4G rollouts and early trials mapped on an interactive timeline.",
+        "linkText": "View Timeline",
+        "url": "html/evolution.html"
+      },
+      {
+        "title": "Impact",
+        "description": "See how connectivity shaped commerce, education, politics, and culture from e\u2011commerce to digital rights.",
+        "linkText": "Discover Impact",
+        "url": "html/impact.html"
+      },
+      {
+        "title": "Future",
+        "description": "Look ahead to the next decade: border fibre, 5G use cases, AI adoption and youth led innovation.",
+        "linkText": "See Future",
+        "url": "html/future.html"
+      }
+    ]
+  }
+}

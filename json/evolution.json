@@ -1,0 +1,69 @@
+{
+  "title": "Internet Evolution in Pakistan (1995-2024)",
+  "introduction": [
+    "The evolution of the internet in Pakistan is a story of transformation - from elite access in a few universities to nationwide 4G and 5G networks empowering millions.",
+    "This timeline showcases the major technical, social, and policy-driven milestones that brought Pakistan into the digital age."
+  ],
+  "timeline": [
+    {
+      "year": "1995",
+      "title": "First Public Internet Access",
+      "description": "Digicom launched Pakistan\u2019s first public dial-up internet service in 1995 (using a 64 kbps satellite link in Karachi)."
+    },
+    {
+      "year": "1998",
+      "title": "PTCL Launches National Dial-Up",
+      "description": "Early ISPs such as Digicom, BrainNET (1996), and Paknet (PTCL) offered dial-up, mainly to universities, institutions, and early adopters."
+    },
+    {
+      "year": "2001",
+      "title": "DSL Broadband Introduced",
+      "description": "Micronet Broadband introduced Pakistan\u2019s first DSL service in 2001. PTCL launched its nation-wide DSL project (Broadband Pakistan) in 2007, making broadband widely accessible."
+    },
+    {
+      "year": "2006",
+      "title": "Wi-Tribe and Wateen Wireless",
+      "description": "Wateen launched the world\u2019s largest WiMAX network in 2007, followed by Wi-tribe in 2009 with prepaid wireless internet."
+    },
+    {
+      "year": "2008",
+      "title": "YouTube Culture Begins",
+      "description": "By 2008, with 22 million internet users, YouTube and social media began influencing Pakistani youth culture, despite later bans (2012\u20132016)."
+    },
+    {
+      "year": "2014",
+      "title": "3G and 4G Spectrum Auction",
+      "description": "Pakistan\u2019s first 3G and 4G licenses were auctioned in April 2014. By May, Ufone, Mobilink, Telenor, and Zong had launched 3G, while Zong also rolled out 4G."
+    },
+    {
+      "year": "2016",
+      "title": "Mobile-First Generation",
+      "description": "By 2016, smartphone users reached ~40 million, crossing 50 million by 2017\u201318."
+    },
+    {
+      "year": "2020",
+      "title": "COVID-19 and Digital Shift",
+      "description": "Pandemic forces online education, remote work, and digital transformation. Platforms like Zoom and Google Meet rise sharply."
+    },
+    {
+      "year": "2021",
+      "title": "Fiber Internet Expansion",
+      "description": "StormFiber offers up to 1 Gbps residential fiber; Nayatel and others provide high-speed FTTH (300 Mbps+), with gigabit available in select plans."
+    },
+    {
+      "year": "2023",
+      "title": "5G Pilot Trials",
+      "description": "Zong conducted the first 5G test in 2019 with speeds over 1 Gbps. By 2023, trials were held in Islamabad and Lahore, but commercial rollout is still pending."
+    },
+    {
+      "year": "2024",
+      "title": "National Broadband Policy",
+      "description": "The government\u2019s Digital Pakistan vision and broadband policies aim for near-universal internet access by 2030, with focus on rural connectivity and youth skills."
+    }
+  ],
+  "footer": {
+    "credits": "Timeline compiled for CM1040 Web Development",
+    "author": "Aamir Mustafa",
+    "year": 2025
+  }
+}

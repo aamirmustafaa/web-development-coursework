@@ -1,0 +1,64 @@
+{
+  "hero": {
+    "headline": "From the First Dial\u2011Up to the Age of 5G",
+    "backgroundImage": "assets/hero-pakistan-internet.jpg",
+    "overlay": true
+  },
+  "welcome": {
+    "title": "Welcome to Your Digital Journey",
+    "paragraphs": [
+      "Pakistan's internet story is one of resilience, growth, and transformation. From the first public dial-up connections in the 90s to today's blazing fast 5G trials, it's been a revolutionary ride.",
+      "This website offers a deep look at how internet connectivity has reshaped Pakistan\u2019s education, economy, culture, and digital identity.",
+      "We highlight historic milestones, analyze current usage trends, and look ahead to future possibilities in connectivity and technology."
+    ]
+  },
+  "highlights": [
+    {
+      "icon": "assets/first connection.png",
+      "title": "The First Connections",
+      "year": "1995\u20132001",
+      "detail": "Early ISPs such as Digicom (1995), BrainNET (1996), and Paknet (PTCL) offered dial-up, mainly to universities, institutions, and early adopters. Internet cafes began appearing in major cities like Karachi and Lahore."
+    },
+    {
+      "icon": "assets/broadband revolution.png",
+      "title": "Broadband Revolution",
+      "year": "2002\u20132010",
+      "detail": "Micronet Broadband introduced DSL in 2001, followed by PTCL\u2019s nationwide DSL project in 2007. Wateen launched WiMAX in 2007, and Wi-Tribe followed in 2009 with prepaid wireless internet."
+    },
+    {
+      "icon": "assets/3g 4g .png",
+      "title": "3G, 4G & Beyond",
+      "year": "2014\u2013Present",
+      "detail": "Pakistan\u2019s first 3G and 4G licenses were auctioned in April 2014. By May, Ufone, Mobilink, Telenor, and Zong had launched 3G, while Zong also rolled out 4G."
+    },
+    {
+      "icon": "assets/rise of digital economy.png",
+      "title": "Rise of the Digital Economy",
+      "year": "2018\u2013Now",
+      "detail": "With more users online, Pakistan became a top global freelancer hub. E-commerce platforms, mobile wallets, EdTech, and YouTubers have all flourished, reshaping how Pakistanis work, learn, and earn."
+    }
+  ],
+  "facts": {
+    "title": "Did You Know?",
+    "list": [
+      "Pakistan had over 130 million broadband subscriptions by 2024, with ~111\u2013116 million unique internet users.",
+      "The country ranks among the top 5 nations for freelance earnings.",
+      "3G/4G coverage grew from ~60% of population in 2018 to ~81% in 2024, driven by USF rural projects.",
+      "YouTube is Pakistan\u2019s most visited website after Google.",
+      "StormFiber offers up to 1 Gbps residential fiber; Nayatel and others provide high-speed FTTH (300 Mbps+), with gigabit available in select plans."
+    ]
+  },
+  "cta": {
+    "headline": "Why This Project Matters",
+    "points": [
+      "The internet isn\u2019t just technology. It's an equalizer. It connects people to education, healthcare, and economic opportunities.",
+      "In Pakistan, the web is helping students attend virtual classes, freelancers earn global income, and communities access vital services.",
+      "This website documents the history, celebrates the present, and imagines the future of Pakistan\u2019s digital growth."
+    ]
+  },
+  "footer": {
+    "credits": "Internet in Pakistan Project",
+    "author": "Created by Aamir Mustafa",
+    "year": 2025
+  }
+}

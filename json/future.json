@@ -1,0 +1,140 @@
+{
+  "hero": {
+    "title": "Where Pakistan\u2019s Internet Is Headed",
+    "subtitle": "5G, fiber, AI and rights frameworks will shape the next decade of participation and growth."
+  },
+  "signals": {
+    "smallHeader": "Forecasts",
+    "title": "Signals & Projections (2026\u20132030)",
+    "desc": "Conservative estimates based on regional trends and current baselines.",
+    "items": [
+      {
+        "value": "+40%",
+        "label": "Broadband subscriptions"
+      },
+      {
+        "value": "70%",
+        "label": "4G/5G share of traffic"
+      },
+      {
+        "value": "+2\u00d7",
+        "label": "Fiber route\u2011km"
+      },
+      {
+        "value": "$3\u20135B",
+        "label": "Digital exports/yr"
+      }
+    ]
+  },
+  "tracks": {
+    "smallHeader": "Tracks",
+    "title": "Key Tracks To Unlock Value",
+    "desc": "Execution across infrastructure, capability.",
+    "items": [
+      {
+        "title": "Nationwide fiber & IXPs",
+        "desc": "Last mile fiber in metros & shared backhaul to tier 2 cities; local peering to lower latency."
+      },
+      {
+        "title": "5G standalone pilots",
+        "desc": "Campus networks, FWA for SMEs and industrial IoT sandboxes in ports and SEZs."
+      },
+      {
+        "title": "AI for public services",
+        "desc": "Voice bots for citizen services, OCR for records, and AI triage in tele health."
+      },
+      {
+        "title": "Fintech & open payments",
+        "desc": "Interoperable rails, QR ubiquity and SME credit scoring to lift digital commerce."
+      },
+      {
+        "title": "Skills & startup pipeline",
+        "desc": "National micro\u2011credentials, cloud credits and working near campuses."
+      },
+      {
+        "title": "Rights & safety by design",
+        "desc": "Transparent content rules, due process and data protection to build trust."
+      }
+    ]
+  },
+  "futures": {
+    "smallHeader": "Possible Future",
+    "title": "Three Plausible Futures",
+    "desc": "Direction hinges on spectrum policy, investment and rights guarantees.",
+    "items": [
+      {
+        "title": "Green sprint",
+        "desc": "Co\u2011ordinated spectrum + fiber capex, exports 11% GDP, costs fall; inclusion expands."
+      },
+      {
+        "title": "Patchy progress",
+        "desc": "Selective metros thrive; second\u2011tier cities lag; affordability pressure persists."
+      },
+      {
+        "title": "Stalled momentum",
+        "desc": "Regulatory risks delays 5G/fiber; talent churn rises; platforms de\u2011prioritize market."
+      }
+    ]
+  },
+  "roadmap": {
+    "smallHeader": "Road Map",
+    "title": "Near\u2011term Roadmap",
+    "desc": "Milestones any coalition (public, private, civil society) can rally around.",
+    "years": {
+      "2025": [
+        {
+          "title": "Spectrum & peering",
+          "desc": "Finalize spectrum roadmap; expand IXPs in Karachi/Lahore/Islamabad."
+        }
+      ],
+      "2026": [
+        {
+          "title": "Fiber densification",
+          "desc": "Duct sharing policies; metro last\u2011mile pilots; open\u2011access wholesale."
+        }
+      ],
+      "2027": [
+        {
+          "title": "Campus networks",
+          "desc": "Campus networks in SEZs and ports; FWA for SME corridors."
+        }
+      ],
+      "2028": [
+        {
+          "title": "Gig tech at scale",
+          "desc": "AI\u2011assisted services; one\u2011stop citizen portals; data registries."
+        }
+      ]
+    }
+  },
+  "guardrails": {
+    "smallHeader": "Guardrails",
+    "title": "Key Risks & Mitigations",
+    "desc": "Build guardrails early to maintain trust and investment.",
+    "items": [
+      {
+        "title": "Affordability squeeze",
+        "desc": "Device financing and targeted data subsidies; promote competition."
+      },
+      {
+        "title": "Data protection gaps",
+        "desc": "Pass + enforce DPA with independent oversight and breach notification."
+      },
+      {
+        "title": "Platform volatility",
+        "desc": "Interoperable rails and local caching; predictable, consultative rule."
+      },
+      {
+        "title": "Skills shortage",
+        "desc": "Micro\u2011credentials tied to employer demand; remote\u2011work infrastructure."
+      }
+    ]
+  },
+  "cta": {
+    "text": "Ready to shape the next decade? See how today's choices in policy and infrastructure ripple across jobs, services and rights."
+  },
+  "footer": {
+    "course": "CMI040 Web Development \u2014 Internet in Pakistan",
+    "creator": "Created by Amir Mustafa \u2014 Goldsmiths, University of London \u00a9 2025"
+  }
+}
