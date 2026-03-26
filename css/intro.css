@@ -1,0 +1,337 @@
+/* ===================== INTRO (robust version) ===================== */
+
+/* Base */
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+  color: var(--text);
+
+  /* Tall background image from your picture-2 */
+  background: url('../assets/introduction.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  min-height: 100vh;
+}
+  
+
+/* Tokens */
+:root{
+  --accent:#bcd4ff;
+  --muted:#b3c1d9;
+  --card-bg:rgba(15,30,66,.55);
+  --card-border:rgba(166,198,255,.45);
+  --outer-border:rgba(166,198,255,.6);
+  --shadow-1:0 10px 28px rgba(0,0,0,.38);
+  --shadow-2:0 16px 44px rgba(0,0,0,.45);
+
+  --w-wrap: 980px;
+
+  --s-0:clamp(.95rem,.85rem + .25vw,1.05rem);
+  --s-1:clamp(1.05rem,.95rem + .5vw,1.25rem);
+  --s-2:clamp(1.35rem,1.1rem + 1vw,1.7rem);
+  --s-3:clamp(1.8rem,1.4rem + 2vw,2.4rem);
+  --s-4:clamp(2.6rem,2.1rem + 3.8vw,4.2rem);
+}
+
+/* Top navigation */
+.top-nav {
+  position: absolute;
+  top: 1.5rem;
+  right: 2rem;
+  left:auto;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  
+  gap: 2rem;
+  /* The navigation uses a very small uppercase font with generous
+     letter‑spacing to echo the minimal menu in the reference design. */
+  font-size: 0.75rem;
+  letter-spacing: 0.15em;
+}
+.top-nav a {
+  color: var(--muted);
+  text-decoration: none;
+  font-weight: 600;
+  text-transform: uppercase;
+  opacity: 0.8;
+  transition: all 0.25s ease;
+}
+.top-nav a:hover {
+  opacity: 1;
+  color: var(--accent);
+  text-shadow: 0 0 8px rgba(96, 165, 250, 0.6);
+}
+.top-nav a.active {
+  color: var(--accent);
+  opacity: 1;
+  text-shadow: 0 0 12px rgba(96, 165, 250, 0.8),
+               0 0 20px rgba(96, 165, 250, 0.4);
+}
+
+/* Layout helpers */
+.wrap{width:100%; max-width:var(--w-wrap); margin:0 auto;}
+
+/* HERO */
+.hero{
+  text-align:center;
+  padding: clamp(200px, 28vh, 320px) 24px clamp(90px, 11vh, 140px);
+}
+.hero-kicker{
+  display:block; margin-bottom:10px;
+  font-family: 'Julius Sans One';
+  font-size:2rem;letter-spacing:.25em; text-transform:uppercase;
+  color:#ffffff; text-shadow:0 15px 24px rgba(150,190,255,.35);
+  
+}
+.hero h1 {
+  font-family: 'Julius Sans One', sans-serif;
+  font-weight: 400;
+  margin-top: 150px;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  line-height: 1.15;
+  white-space: nowrap;
+  font-size: clamp(1.8rem, 5vw, 3.2rem);
+  margin: 0 0 1rem 0;
+  color:#ffffff; text-shadow:0 3px 24px rgba(150,190,255,.35);
+}
+
+/* Welcome block: under hero title, slightly right shifted */
+.welcome-block{
+  margin: clamp(28px, 3vh, 42px) auto 0;
+  margin-top: 800px;
+  width:min(64rem, 80%);
+  transform: translateX(36%); /* nudge to right like the mock */
+  text-align:justify;
+
+  padding:122px 120px;
+  border-radius:38px;
+  background:var(--card-bg);
+  border:1px solid var(--card-border);
+  backdrop-filter:blur(10px);
+  box-shadow:var(--shadow-1);
+}
+.welcome-title{
+  margin:0 0 15px;
+  font-family:'Julius Sans One',sans-serif;
+  font-weight:800; text-transform:uppercase; letter-spacing:.10em;
+  font-size:clamp(1.4rem, 2.2vw, 2rem);
+  color:#3e7092;
+}
+.welcome-copy{ display:grid; gap:10px }
+.welcome-copy p{ margin:0; color:var(--muted); font-size:var(--s-1); line-height:1.75 }
+
+.section {
+  width: 100%;                        /* section spans full width */
+  max-width: var(--w-wrap);           /* but content is capped (like 980px) */
+  margin: 0 auto;                     /* centers the block */
+  padding: clamp(150px, 16vh, 180px) 34px; 
+}
+
+/*the headings above the boxes as titles*/
+.section-title {
+  text-align:center;
+  margin:0 0 62px;
+  font-family:'Julius Sans One',sans-serif;
+  font-weight:400;
+  text-transform:uppercase;
+  letter-spacing:.12em;
+  font-size: var(--s-3);
+  line-height:1.25;
+  color:#f4f7ff;
+}
+
+.kicker {
+  display:block;
+  text-align:center;
+  margin-bottom:8px;
+  color:var(--accent);
+  letter-spacing:.2em;
+  text-transform:uppercase;
+  font-size:.8rem;
+}
+
+.section-lead {
+  text-align:center;
+  max-width:940px;
+  margin:0 auto 42px;
+  color:var(--muted);
+  font-size: var(--s-1);
+}
+
+/* Milestones */
+.timeline-list{ 
+  max-width:1160px;
+   margin:36px auto 0;
+    display:grid; 
+    gap:18px 
+  }
+
+.milestone{
+  display:flex; gap:18px; align-items:flex-start;
+  padding:25px 17px;
+  background:var(--card-bg);
+  border:1px solid var(--card-border);
+  border-radius:28px;
+  backdrop-filter:blur(10px);
+  box-shadow:var(--shadow-1);
+  transition:transform .2s ease, box-shadow .2s ease;
+}
+.milestone:hover{ 
+  transform:translateY(-3px);
+   box-shadow:var(--shadow-2)
+}
+
+.m-icon{ 
+  width:134px; 
+  height:144px; 
+  display:grid; 
+  place-items:center;
+  flex-shrink:0 
+}
+.m-icon img{ 
+  width:80%; 
+  height:80%;
+  object-fit:contain
+}
+
+.m-body{ 
+  flex:1;
+  text-align:left
+}
+
+.m-year{
+  font-size:.78rem; 
+  letter-spacing:.18em; 
+  text-transform:uppercase; 
+  color:var(--accent); 
+  font-weight:700; 
+  margin-bottom:4px 
+}
+
+.m-title{
+  margin:0 0 6px; 
+  font-size:1.05rem; 
+  color:#fff; 
+  font-weight:700; 
+  letter-spacing:.02em 
+}
+.m-text{ margin:0; 
+  color:var(--muted); 
+  font-size: var(--s-1); 
+  line-height:1.65 }
+
+/* Facts */
+.facts-panel{
+  max-width:960px; margin:0 auto;
+  margin-top: 60px;
+  padding:43px 31px;
+  border-radius:22px;
+  background:rgba(14,28,64,.5);
+  border:1px solid var(--outer-border);
+  box-shadow:var(--shadow-1);
+}
+.fact-list{ 
+  list-style:none; 
+  display:grid; 
+  gap:14px; margin:0; 
+  padding:0
+}
+.fact-list li{
+  padding:24px 28px;
+  border:1px solid rgba(170,205,255,.35);
+  border-radius:999px;
+  background:rgba(255,255,255,.06);
+  color:#eaf1ff;
+  font-size: var(--s-0); line-height:1.6;
+}
+
+/* Why */
+.why-grid{ 
+  display:grid; 
+  grid-template-columns:repeat(3,1fr); 
+  gap:50px; 
+  max-width:1020px; 
+  margin-top: 138px; 
+}
+.why-card{
+  padding:52px 36px; 
+  border-radius:18px;
+  background:#15347127;
+  border:1px solid var(--card-border);
+  box-shadow:var(--shadow-1); 
+  min-height:120px; 
+  text-align:center;
+}
+.why-card p{ 
+  margin:0; 
+  color:#eaf1ff; 
+  font-size: var(--s-1); 
+  line-height:1.7 
+}
+
+/* Footer */
+.footer{ 
+  text-align:center;
+  font-family: 'Julius Sans One', sans-serif;
+  font-weight: 400;
+  margin-top: 400px; 
+  padding: 90px 24px 120px; 
+  color:#9eb3d3 
+}
+.footer strong{ color:#cfe1ff }
+
+
+/* Responsive */
+@media (max-width: 1024px){
+  .why-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 900px){
+  .welcome-block {
+    transform: none;
+    width: 92%;
+    margin-top: 260px; /* ↓ reduce from big desktop value */
+  }
+}
+
+@media (max-width: 720px){
+  .hero { padding: 160px 18px 100px; }
+
+  /* .hero-title → .hero h1 (correct selector) */
+  .hero h1 {
+    letter-spacing: .1em;
+    font-size: clamp(2.2rem, 7.5vw, 2.8rem);
+    white-space: normal;     /* prevent overflow on small screens */
+  }
+
+  .section { padding: 96px 18px; }
+  .timeline-list { gap: 16px; }
+  .facts-panel { padding: 22px 18px; }
+  .why-grid { grid-template-columns: 1fr; }
+
+  /* Also tame welcome block more on phones */
+  .welcome-block { margin-top: 140px; }
+}
+
+@media (max-width: 480px){
+  .top-nav { gap: 16px; right: 16px; font-size: .7rem; }
+}
+/* Make sure content isn't hidden behind the nav on small screens */
+@media (max-width: 640px) {
+  /* Nav: tighter spacing & wrap if needed */
+  .navbar { top: max(12px, env(safe-area-inset-top)); right: 16px; left: 16px; }
+  .nav-links {
+    gap: 0.9rem;
+    flex-wrap: wrap;               /* allow wrapping on very narrow phones */
+    justify-content: flex-end;
+    font-size: .72rem;
+  }@media (max-width: 640px) {
+    .navbar { top: 14px; right: 16px; }
+    .nav-links { gap: 1rem; }
+  }}

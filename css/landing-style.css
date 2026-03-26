@@ -1,0 +1,544 @@
+/* Reset & base */
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  line-height: 1.6;
+  color: #fff;
+  background-color: #020e24;
+  background: url('../assets/frame9.png') center top no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* Navbar (top-right, airy) */
+.navbar {
+  position: absolute;
+  top: 1.25rem;
+  right: 2rem;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  background: transparent;
+}
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+  font-size: 0.75rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+}
+.nav-links a {
+  color: #fff;
+  text-decoration: none;
+  opacity: 0.8;
+  transition: opacity .2s;
+}
+.nav-links a:hover { opacity: 1; }
+
+/* Header & Hero */
+/* Header & Hero */
+header {
+  position: relative;
+  min-height: 100vh;
+  display: block;              /* no vertical centering */
+  padding: 0 2rem;
+  overflow: hidden;
+}
+
+/* Place the whole hero a bit above the bottom, centered */
+.hero {
+  position: absolute;
+  left: 50%;
+  bottom: 40vh;               /* closer to center (was 28vh) */
+  transform: translateX(-50%);
+  text-align: center;
+  margin: 0;
+  max-width: 80rem;
+}
+
+/* Keep your original typography exactly the same */
+.hero h1 {
+  font-family: 'Julius Sans One', sans-serif;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  line-height: 1.15;
+  white-space: nowrap;
+  font-size: clamp(2.25rem, 6vw, 4rem);
+  margin: 0 0 1rem 0;
+}
+.hero p {
+  color: #d3daf1;
+  line-height: 1.45;
+  font-size: clamp(0.95rem, 1.4vw, 1.15rem);
+  max-width: 56rem;
+  margin: 0 auto 1.3rem;
+  text-wrap: pretty;
+}
+/* CTA button (pill) */
+.btn {
+  display: inline-block;
+  background-color: #0d3b77;
+  border: 1px solid #245fa7;
+  color: #fff;
+  padding: 0.55rem 1.25rem;
+  border-radius: 999px;
+  font-size: 0.8rem;
+  letter-spacing: 0.05em;
+  text-decoration: none;
+  transition: background-color .25s, border-color .25s, transform .15s;
+}
+.btn:hover { background-color:#184f9f; border-color:#2d6cc0; transform: translateY(-1px); }
+.arrow { margin-left: .4rem; }
+
+/* Sections spacing */
+main section {
+  padding: 8rem 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  margin-top: clamp(14rem, 22vw, 22rem);
+}
+
+/* Section headers */
+.section-header { 
+  text-align: center; 
+  margin-top: 4rem;
+  margin-bottom: 2.5rem; 
+}
+
+.section-header h4 {
+  font-size: 0.75rem;
+  letter-spacing: 0.22em;
+  color: #a6b7c9;
+  margin-bottom: 0.6rem;
+  text-transform: uppercase;
+}
+.section-header h2 {
+  font-family: 'Julius Sans One', sans-serif;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  line-height: 1.2;
+  font-size: clamp(1.8rem, 4vw, 2.5rem);
+  margin-bottom: 0.75rem;
+  white-space: normal;   /* allow wrapping */
+  max-width: 22ch;       /* narrow width so it naturally breaks into 2 lines */
+  margin-left: auto;
+  margin-right: auto;
+}
+.section-header p {
+  color: #ccd6f6;
+  max-width: 40rem;
+  margin: 0 auto;
+  font-size: clamp(0.9rem, 1.2vw, 1rem);
+}
+
+/* =========================
+   Explore cards (FORCE 4-UP)
+   ========================= */
+/* Explore cards */
+/* Explore Section (cards container) */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2.5rem;
+  margin-top: 5rem;   /* was 2.5rem → pushes cards lower */
+}
+
+/* Tablet adjustments */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .cards {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+}
+
+.card {
+  background-color: rgba(10, 34, 64, 0.7); /* same dark blue, 70% opacity */
+  border: 1px solid #294772;
+  border-radius: 1.25rem;
+  padding: 2rem 1.8rem;        /* more padding */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 340px;           /* taller card */
+  transition: background-color 0.3s, border-color 0.3s, transform 0.2s;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.35);
+}
+
+.card:hover {
+  background-color: #0e2e55;
+  border-color: #3a5b8e;
+  transform: translateY(-4px);
+}
+
+.card h3 {
+  font-size: 1.25rem;          /* bigger title */
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+  color: #ffffff;
+  letter-spacing: 0.08em;
+}
+
+.card p {
+  flex: 1;
+  font-size: 1rem;             /* bigger text */
+  color: #bfd4ee;
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+}
+
+.card .link {
+  color: #6fa9e1;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.95rem;          /* slightly larger */
+  display: inline-flex;
+  align-items: center;
+}
+
+/* 1) Keep Milestones header nicely spaced from the box */
+.milestones-section .section-header {
+  margin-bottom: 5rem; /* more breathing room above the box */
+}
+
+/* 2) Make the box look bigger without breaking internals */
+.timeline-wrap {
+  /* keep width/overflow */
+  width: 100%;
+  overflow: hidden;
+
+  /* visual weight only (no internal size changes) */
+  border: 2px solid #0b2d4b;     /* stronger border */
+  border-radius: 2rem;           /* rounder corners */
+  background-color: rgba(10, 34, 64, 0.7); /* same dark blue, 70% opacity */
+  box-shadow: 0 6px 20px rgba(0,0,0,0.35);
+  padding: 1.25rem;              /* add padding around header & rail */
+  margin-top: 0;                 /* no extra push; header spacing handles it */
+}
+
+/* 3) Header inside the box — a touch larger */
+.timeline-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 1.25rem;
+  border-bottom: 1px solid #225180;
+  font-size: 0.95rem;            /* tiny bump for readability */
+  color: #ffffff;
+}
+
+/* 4) !!! Keep the rail sizes exactly as before (don’t change these) */
+.timeline {
+  position: relative;
+  height: 116px;                 /* ORIGINAL VALUE — do not change */
+  overflow: hidden;
+  margin-top: 1rem;              /* small gap below header */
+  mask-image: linear-gradient(90deg, transparent 0%, #000 6%, #000 94%, transparent 100%);
+}
+
+.track {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  height: 100%;
+  will-change: transform;
+  animation: timeline-scroll 24s linear infinite;
+}
+
+@keyframes timeline-scroll {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+
+/* 5) !!! Keep item sizes exactly as before (don’t change these) */
+.t-item {
+  flex: 0 0 auto;
+  min-width: 220px;              /* ORIGINAL VALUE */
+  height: 84px;                  /* ORIGINAL VALUE */
+  border-radius: 1rem;
+  background: #0a2240;
+  border: 1px solid #93b0fd;
+  box-shadow: 0 1px 2px rgba(16, 24, 32, 0.06), 0 8px 24px rgba(16, 24, 32, 0.06);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 0.6rem 0.8rem;
+  cursor: pointer;
+  transition: transform 0.25s, box-shadow 0.25s;
+}
+
+.t-item:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 2px 6px rgba(16, 24, 32, 0.08), 0 16px 40px rgba(16, 24, 32, 0.10);
+}
+
+/* Optional: slightly clearer text without changing layout */
+.t-year { font-size: 0.98rem; }  /* tiny bump, safe */
+.t-event { font-size: 0.92rem; } /* tiny bump, safe */
+/* Stats */
+.stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem; margin-top: 2rem;
+}
+.stat-card {
+  background-color: rgba(10, 34, 64, 0.7); /* same dark blue, 70% opacity */
+  border: 1px solid #294772;
+  border-radius: 1rem;
+  padding: 2.5rem 1.5rem;
+  text-align: center;
+  transition: background-color .3s, border-color .3s;
+}
+.stat-card:hover { background:#0e2e55; border-color:#3a5b8e; }
+.stat-card .number { font-size: 2.5rem; font-weight: 700; margin-bottom: .8rem; }
+.stat-card .label { font-size: .75rem; text-transform: uppercase; letter-spacing: .1em; color:#b0bce1; }
+
+/* Quote */
+.perspective-section .quote-card {
+  background-color: #0a2240;
+  border: 1px solid #294772;
+  border-radius: 1rem;
+  padding: 2rem 2.5rem;
+  max-width: 1000px;
+  margin: 2rem auto 0;
+  margin-top: 1rem;
+  text-align: center;
+  box-shadow: 0 4px 15px rgba(0,0,0,.3);
+}
+.quote { font-size: 1.25rem; font-style: italic; margin-bottom: 1.5rem; color:#dce3f7; line-height:1.6; }
+cite { font-size: .8rem; color:#a6b7c9; font-style: normal; }
+
+/* Footer */
+footer {
+  text-align: center;
+  margin-top: 10rem;
+  padding: 3rem 1rem;
+  font-size: 0.8rem;
+  color: #a6b7c9;
+  font-family: 'Julius Sans One', sans-serif;
+  font-weight: 900;
+  padding: 70px 34px 100px;
+}
+
+
+/* Responsive tweaks */
+@media (max-width: 768px) {
+  /* Fix background attachment on mobile for better performance */
+  body {
+    background-attachment: scroll;
+  }
+
+  
+  /* Navigation - make it mobile friendly */
+  /* tighten nav on phones */
+@media (max-width: 640px) {
+  .navbar { top: 14px; right: 16px; }
+  .nav-links { gap: 1rem; }
+}
+  
+  .nav-links { 
+    justify-content: center;
+    gap: 1rem; 
+    font-size: 0.65rem; 
+    flex-wrap: wrap;
+  }
+
+  /* Header adjustments */
+  header {
+    padding: 70px 1rem 0; /* Add top padding to account for fixed navbar */
+    min-height: 100vh;
+  }
+
+  .hero {
+    position: static;
+    transform: none;
+    margin: 20px auto 0; /* Reduced from 80px to 20px for minimal top spacing */
+    padding: 0 1rem;
+    max-width: 100%;
+  }
+
+  .hero h1 { 
+    letter-spacing: 0.08em; 
+    white-space: normal; 
+    font-size: clamp(1.8rem, 8vw, 2.8rem);
+    line-height: 1.1;
+  }
+
+  .hero p {
+    font-size: 1rem;
+    margin-bottom: 2rem;
+  }
+
+  /* Section spacing for mobile */
+  main section { 
+    padding: 4rem 1rem; 
+    margin-top: 0;
+  }
+
+  main section:first-child {
+    margin-top: 80px; /* Account for fixed navbar */
+  }
+
+  /* Cards - make them stack nicely */
+  .cards {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    margin-top: 3rem;
+  }
+
+  .card {
+    padding: 1.5rem;
+    min-height: 280px;
+  }
+
+  .card h3 {
+    font-size: 1.1rem;
+  }
+
+  .card p {
+    font-size: 0.9rem;
+  }
+
+  /* Timeline adjustments */
+  .timeline-wrap {
+    padding: 1rem;
+    border-radius: 1rem;
+  }
+
+  .timeline-head {
+    flex-direction: column;
+    gap: 0.5rem;
+    text-align: center;
+    font-size: 0.85rem;
+  }
+
+  .timeline {
+    height: 100px;
+  }
+
+  .t-item {
+    min-width: 180px;
+    height: 70px;
+    padding: 0.4rem 0.6rem;
+  }
+
+  .t-year { 
+    font-size: 0.85rem; 
+    font-weight: 600;
+  }
+  
+  .t-event { 
+    font-size: 0.8rem; 
+  }
+
+  /* Stats - better mobile layout */
+  .stats {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+
+  .stat-card {
+    padding: 1.5rem 1rem;
+  }
+
+  .stat-card .number {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .stat-card .label {
+    font-size: 0.7rem;
+  }
+
+  /* Quote card */
+  .perspective-section .quote-card {
+    padding: 1.5rem;
+    margin-top: 2rem;
+  }
+
+  .quote {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  cite {
+    font-size: 0.75rem;
+  }
+
+  /* Footer */
+  footer {
+    margin-top: 6rem;
+    padding: 2rem 1rem 3rem;
+    font-size: 0.75rem;
+  }
+}
+
+@media (max-width: 480px) {
+  /* Even smaller screens */
+  .nav-links {
+    font-size: 0.6rem;
+    gap: 0.5rem;
+  }
+
+  .hero {
+    margin: 15px auto 0; /* Reduced from 60px to 15px for minimal top spacing on small screens */
+  }
+
+  .hero h1 {
+    font-size: clamp(1.5rem, 9vw, 2.2rem);
+  }
+
+  .hero p {
+    font-size: 0.9rem;
+  }
+
+  .btn {
+    padding: 0.5rem 1rem;
+    font-size: 0.75rem;
+  }
+
+  /* Section headers */
+  .section-header h2 {
+    font-size: clamp(1.4rem, 6vw, 2rem);
+  }
+
+  .section-header p {
+    font-size: 0.85rem;
+  }
+
+  /* Stats - single column on very small screens */
+  .stats {
+    grid-template-columns: 1fr;
+  }
+
+  /* Timeline items even smaller */
+  .t-item {
+    min-width: 160px;
+    height: 65px;
+  }
+
+  .t-year { 
+    font-size: 0.8rem; 
+  }
+  
+  .t-event { 
+    font-size: 0.75rem; 
+  }
+}
+
+@media (max-width: 640px) {
+  .nav-links { gap: 1rem; font-size: .7rem; }
+  .hero h1 { letter-spacing: .1em; white-space: normal; }
+  .hero { margin: 6rem auto 8rem; }
+  main section { padding: 6rem 1.25rem; margin-top: 8rem; }
+}
