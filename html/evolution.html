@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Internet Evolution in Pakistan — Timeline</title>
+
+  <!-- Template Engines (keep if your JS uses them) -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/nunjucks/3.2.4/nunjucks.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.8/handlebars.min.js"></script>
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;900&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;900&family=JetBrains+Mono:wght@400;500;700&family=Julius+Sans+One&display=swap" rel="stylesheet">
+  <!-- Styles -->
+  <link rel="stylesheet" href="../css/evolution.css">
+</head>
+<body>
+  <!-- Progress (optional) -->
+  <div class="progress-container"><div id="progress-bar" class="progress-bar"></div></div>
+
+  <!-- Loading -->
+  <div id="loading" class="loading" role="status" aria-live="polite">
+    <div class="spinner" aria-hidden="true"></div>
+    <div class="loading-text">Loading Pakistan's digital timeline…</div>
+  </div>
+
+  <!-- Render target (kept for your JS pipeline) -->
+  <div id="timeline-content" hidden></div>
+
+  <!-- Template used by evolution.js -->
+  <script type="text/template" id="timeline-template">
+    <!-- Top navigation -->
+    <nav class="top-nav">
+      <a href="../index.html">Home</a>
+      <a href="intro.html">Introduction</a>
+      <a href="evolution.html" class="active">Evolution</a>
+      <a href="impact.html">Impact</a>
+      <a href="future.html">Future</a>
+    </nav>
+
+    <header class="header">
+      <div class="flag-bg" aria-hidden="true"></div>
+      <div class="flag-veil" aria-hidden="true"></div>
+    
+      <!-- Date kicker above the title -->
+      <div class="header-kicker">1995–2024</div>
+    
+      <!-- Bright white title -->
+      <h1 class="header-title">Internet Evolution in Pakistan</h1>
+    
+      <!-- Intro paragraphs -->
+      <div class="header-intro">
+        {% for paragraph in introduction %}
+          <p class="intro-paragraph">{{ paragraph }}</p>
+        {% endfor %}
+      </div>
+    </header>
+
+    <!-- Timeline -->
+    <main class="timeline-container">
+      <div class="timeline-line" aria-hidden="true"></div>
+
+      {% for item in timeline %}
+      <article class="timeline-item" data-year="{{ item.year }}">
+        <div class="timeline-content" tabindex="0">
+          <h3 class="timeline-title">{{ item.title }}</h3>
+          <p class="timeline-description">{{ item.description }}</p>
+        </div>
+        <div class="timeline-year">{{ item.year }}</div>
+      </article>
+      {% endfor %}
+    </main>
+
+    <!-- Footer -->
+    <footer>
+      <div class="container foot">
+        <div><strong>{{ footer.credits }}</strong></div>
+        <div>{{ footer.author }}</div>
+        <div style="color:#5a6b64;font-size:.9rem">{{ footer.year }}</div>
+      </div>
+    </footer>
+  </script>
+
+  <!-- Page logic -->
+  <script src="../js/evolution.js"></script>
+</body>
+</html>
